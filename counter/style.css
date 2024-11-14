@@ -1,40 +1,66 @@
 body {
-    background-color: #779CAB;
-
-}
-
-.container {
-
+    background-color: #779cab;
+  }
+  
+  .container {
     width: 95%;
     height: 100vh;
     margin: auto;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.counter {
-    border: 2px solid black;
-    width: 600px;
-    height: 350px;
-    margin: auto;
-    padding: 25px;
-    text-align: center;
-    background-color: #69DC9E;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.counter h1 {
+  }
+  
+  .image {
+    display: none;
+    width: 100%;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  #prev,
+  #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 2rem;
-
-}
-
-#count {
-    font-size: 9rem;
-
-}
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  #prev {
+    left: 10px;
+  }
+  
+  #next {
+    right: 10px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #555;
+  }
+  
